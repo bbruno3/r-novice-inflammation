@@ -10,8 +10,8 @@ library(tidyverse)
 
 #git config --global user.email "bruno3@arizona.edu"
 
-data01 <- read_csv(file = "data/data/inflammation-01.csv")
-data01 <- read_csv(file = "data/data/inflammation-01.csv", header = FALSE, sep = ',')
+data01 <- read.csv(file = "data/inflammation-01.csv")
+data01 <- read.csv(file = "data/inflammation-01.csv", header = FALSE, sep = ',')
 
 #r_novice_inflammation_data <- list.files(path = here("data", "data"), full.names = TRUE, pattern = "\\.csv$")
 
