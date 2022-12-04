@@ -18,6 +18,7 @@ class(data01)
 #Dimensions 8B
 dim(data01)
 
+<<<<<<< HEAD
 ##patient_inflammation <- read_csv(file = r_novice_inflammation_data)
 
 #patient-inflammation <- read_csv(file = r-novice-inflammation-data,
@@ -62,6 +63,8 @@ plot(max_day_inflammation)
 min_day_inflammation <- apply(data01, 2, min)
 plot(min_day_inflammation)
 
+=======
+>>>>>>> 89aa254c55b74edf3a52e188c0608284620db7aa
 
 
 
