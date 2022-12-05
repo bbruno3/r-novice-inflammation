@@ -43,7 +43,7 @@ sum(patient_1)
 
 #Performing statistics on the data 8E
 # max inflammation for patient 2 day 7
-max(data01[2,7])
+min(data01[2,7])
 
 #Forcing R to read data as numeric 8F
 mean(as.numeric(data01[1, ]))
