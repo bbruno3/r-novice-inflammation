@@ -11,9 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-```
-{r}
-load
 
 #plot for the avg_day_inflammation
 

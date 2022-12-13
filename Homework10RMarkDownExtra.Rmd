@@ -19,6 +19,9 @@ install.packages("knitr")
 library(rmarkdown)
 library(knitr)
 
+library(rmarkdown)
+render("Homework10RMarkDownExtra.Rmd")
+
 #git config --global user.email "bruno3@arizona.edu"
 
 # read in the datafile
@@ -41,43 +44,78 @@ data01[c(1:4), c(1:10)]
 
 data01[c(5:10), c(1:10)]
 
+---
+8D. Addressing Columns By Name
+---
 
-#Adressing columns by name 8D
 # first row, all of the columns
 patient_1 <- data01[1, ]
+
 # max inflammation for patient 1
 max(patient_1)
 
-#Value if you want to change max to sum
+---
+Value if you want to change max to sum
+---
+
 # first row, all of the columns
 patient_1 <- data01[1, ]
+
 # max inflammation for patient 1
 sum(patient_1)
 
-#Performing statistics on the data 8E
+---
+8E Performing Statistics On The Data
+---
+
 # max inflammation for patient 2 day 7
 min(data01[2,7])
 
-#Forcing R to read data as numeric 8F
+---
+8F. Forcing R to Read Data as Numeric
+---
+
 mean(as.numeric(data01[1, ]))
 
-#Operations across margins of the dataframe 8G
+---
+8G. Operations across margins of the dataframe
+---
+
 avg_patient_inflammation <- apply(data01, 1, mean)
 avg_day_inflammation <- apply(data01, 2, mean)
 
-#Plotting the data, Step 9
+---
+Step 9. Plotting the data
+---
+
 plot(avg_day_inflammation)
-#looking at two other statistics: the maximum and minimum inflammation per day.
-#Question 6
+
+```{r, echo=FALSE}
+plot(avg_day_inflammation)
+```
+
+---
+Question 6: looking at two other statistics: the maximum and minimum inflammation per day.
+---
+
 max_day_inflammation <- apply(data01, 2, max)
 plot(max_day_inflammation)
 
-#Question 7
+```{r, echo=FALSE}
+plot(max_day_inflammation)
+```
+
+---
+Question 7
+---
+
 min_day_inflammation <- apply(data01, 2, min)
 plot(min_day_inflammation)
 
-=======
->>>>>>> 89aa254c55b74edf3a52e188c0608284620db7aa
+```{r, echo=FALSE}
+plot(min_day_inflammation)
+```
+
 
 
 
