@@ -1,0 +1,47 @@
+---
+title: "Homework10ExtraCredit"
+author: "Barbara Bruno"
+date: "2022-12-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r patient-inflammation}
+summary(data01)
+```
+
+#plot for the avg_day_inflammation
+
+```{r patient_1, echo=FALSE}
+plot(avg_day_inflammation)
+```
+
+#plot for the avg_patient_inflammation
+
+```{r}
+summary(avg_patient_inflammation)
+```
+
+#max_day_inflammation
+
+#min_day_inflammation
+
+#r_novice_inflammation
+
+
+
+
+
+
+
+
+
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
