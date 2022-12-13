@@ -11,30 +11,56 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-```{r patient-inflammation}
-summary(data01)
 ```
+{r}
+load
 
 #plot for the avg_day_inflammation
 
-```{r patient_1, echo=FALSE}
+```{r, echo=FALSE}
 plot(avg_day_inflammation)
 ```
 
-#plot for the avg_patient_inflammation
+#avg_patient_inflammation
 
 ```{r}
 summary(avg_patient_inflammation)
 ```
 
-#max_day_inflammation
+#max_day_inflammation 
+
+```{r}
+summary(max_day_inflammation)
+```
+
+#Plot max_day_inflammation 
+
+```{r, echo=FALSE}
+plot(max_day_inflammation)
+```
 
 #min_day_inflammation
 
-#r_novice_inflammation
+```{r}
+summary(min_day_inflammation)
+```
 
+#Plot min_day_inflammation
 
+```{r, echo=FALSE}
+plot(min_day_inflammation)
+```
 
+#r_novice_inflammation_data
+
+```{r}
+summary(r_novice_inflammation_data)
+```
+
+#Plot r_novice_inflammation_data
+```{r, echo=FALSE}
+plot(r_novice_inflammation_data)
+```
 
 
 

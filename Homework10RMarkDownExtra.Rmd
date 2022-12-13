@@ -1,6 +1,13 @@
-#Barbara Bruno
-#BE310
-#Homework 10
+---
+title: "Homework10ExtraCredit"
+author: "Barbara Bruno"
+date: "2022-12-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 
 #package(readr)
@@ -26,12 +33,14 @@ dim(data01)
 ##patient_inflammation <- read_csv(file = r_novice_inflammation_data)
 
 #patient-inflammation <- read_csv(file = r-novice-inflammation-data,
-                                # row_names=c("pat")
-                                # show_row_types = FALSE)
+# row_names=c("pat")
+# show_row_types = FALSE)
+
 #Particular columns 8C
 data01[c(1:4), c(1:10)]
 
 data01[c(5:10), c(1:10)]
+
 
 #Adressing columns by name 8D
 # first row, all of the columns
