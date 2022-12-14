@@ -9,8 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 #package(readr)
+---
 library(readr)
 library(here)
 library(tidyverse)
@@ -19,102 +19,73 @@ install.packages("knitr")
 library(rmarkdown)
 library(knitr)
 
-library(rmarkdown)
-render("Homework10RMarkDownExtra.Rmd")
 
 #git config --global user.email "bruno3@arizona.edu"
 
-# read in the datafile
+Read in the datafile
+---
 data01 <- read.csv("data/data/inflammation-01.csv", header = FALSE, sep = ',')
 
 class(data01)
 
-#Dimensions 8B
+
+8B Dimensions 8B
+----
 dim(data01)
 
-<<<<<<< HEAD
-##patient_inflammation <- read_csv(file = r_novice_inflammation_data)
 
-#patient-inflammation <- read_csv(file = r-novice-inflammation-data,
-# row_names=c("pat")
-# show_row_types = FALSE)
 
-#Particular columns 8C
+8C Particular columns
+---
 data01[c(1:4), c(1:10)]
-
 data01[c(5:10), c(1:10)]
 
----
-8D. Addressing Columns By Name
----
 
-# first row, all of the columns
+8D Addressing Columns By Name
+---
+#first row, all of the columns
 patient_1 <- data01[1, ]
 
 # max inflammation for patient 1
 max(patient_1)
 
----
-Value if you want to change max to sum
----
-
+#Value if you want to change max to sum
 # first row, all of the columns
 patient_1 <- data01[1, ]
 
 # max inflammation for patient 1
 sum(patient_1)
 
----
-8E Performing Statistics On The Data
+
+8E Performing Statistics on the Data
 ---
 
-# max inflammation for patient 2 day 7
+#max inflammation for patient 2 day 7
 min(data01[2,7])
 
+8F Forcing R to Read Data as Numeric
 ---
-8F. Forcing R to Read Data as Numeric
----
-
 mean(as.numeric(data01[1, ]))
 
+8G Operations Across Margins of the Dataframe
 ---
-8G. Operations across margins of the dataframe
----
-
 avg_patient_inflammation <- apply(data01, 1, mean)
 avg_day_inflammation <- apply(data01, 2, mean)
 
+Step 9 Plotting the data
 ---
-Step 9. Plotting the data
----
-
 plot(avg_day_inflammation)
 
-```{r, echo=FALSE}
-plot(avg_day_inflammation)
-```
-
+Question six : looking at two other statistics: the maximum and minimum inflammation per day.
 ---
-Question 6: looking at two other statistics: the maximum and minimum inflammation per day.
----
-
 max_day_inflammation <- apply(data01, 2, max)
 plot(max_day_inflammation)
 
-```{r, echo=FALSE}
-plot(max_day_inflammation)
-```
-
+Question seven
 ---
-Question 7
----
-
 min_day_inflammation <- apply(data01, 2, min)
 plot(min_day_inflammation)
 
-```{r, echo=FALSE}
-plot(min_day_inflammation)
-```
 
 
 
