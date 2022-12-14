@@ -86,7 +86,9 @@ Question seven
 min_day_inflammation <- apply(data01, 2, min)
 plot(min_day_inflammation)
 
-
+```{r}
+plot(max_day_inflammation)
+```
 
 
 
